@@ -1,10 +1,14 @@
-# 🚀 SkillSwap
+# 🚀 # SkillSwap - A Django Skill Exchange Platform
 
 A full-stack Django web application where users can share their skills, discover skills from others, and request skill exchanges.
 
 Built using **Python, Django, Bootstrap 5, and SQLite**.
 
 ---
+## 🌐 Live Demo
+
+🔗 https://skillswap-ezax.onrender.com
+
 
 ## ✨ Features
 
