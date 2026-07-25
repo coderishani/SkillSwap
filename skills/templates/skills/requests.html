@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>My Requests</h1>
+
+{% if requests %}
+
+    {% for request in requests %}
+
+        <h3>{{ request.skill.name }}</h3>
+
+        <p>
+            <strong>From:</strong>
+            {{ request.sender.username }}
+        </p>
+
+        <p>
+    <strong>Status:</strong>
+    {{ request.status }}
+</p>
+
+{% if request.status == "Pending" %}
+
+    <a href="{% url 'accept_request' request.id %}">
+        Accept
+    </a>
+
+    <a href="{% url 'reject_request' request.id %}">
+        Reject
+    </a>
+
+{% endif %}
+
+        <hr>
+
+    {% endfor %}
+
+{% else %}
+
+    <p>No requests received.</p>
+
+{% endif %}
+
+{% endblock %}

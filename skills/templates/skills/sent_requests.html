@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Requests Sent</h1>
+
+{% if requests %}
+
+    {% for request in requests %}
+
+        <h3>{{ request.skill.name }}</h3>
+
+        <p>
+            <strong>To:</strong>
+            {{ request.receiver.username }}
+        </p>
+
+        <p>
+            <strong>Status:</strong>
+            {{ request.status }}
+        </p>
+
+        <hr>
+
+    {% endfor %}
+
+{% else %}
+
+    <p>No requests sent.</p>
+
+{% endif %}
+
+{% endblock %}

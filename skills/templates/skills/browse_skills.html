@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Browse Skills</h1>
+
+<br>
+
+<form method="GET">
+
+    <input
+        type="text"
+        name="q"
+        placeholder="Search skills..."
+        value="{{ request.GET.q }}"
+    >
+
+    <button type="submit">
+        Search
+    </button>
+
+</form>
+
+<hr>
+
+    {% if skills %}
+
+        {% for skill in skills %}
+
+           <div class="card mb-3">
+
+    <div class="card-body">
+
+        <h4 class="card-title">
+            {{ skill.name }}
+        </h4>
+
+        <p class="card-text">
+            <strong>Owner:</strong>
+            {{ skill.owner.username }}
+        </p>
+
+        <p class="card-text">
+            {{ skill.description }}
+        </p>
+
+        {% if skill.owner != user %}
+
+            <a
+                href="{% url 'request_swap' skill.id %}"
+                class="btn btn-primary"
+            >
+                Request Swap
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>No skills available.</p>
+
+    {% endif %}
+
+{% endblock %}
+

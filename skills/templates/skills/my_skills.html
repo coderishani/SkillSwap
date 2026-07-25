@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>My Skills</h1>
+
+    {% if skills %}
+
+        {% for skill in skills %}
+
+            <h3>{{ skill.name }}</h3>
+
+            <p><strong>Description:</strong> {{ skill.description }}</p>
+
+            <p><strong>Level:</strong> {{ skill.level }}</p>
+
+            <a href="{% url 'edit_skill' skill.id %}">Edit</a>
+            <a href="{% url 'delete_skill' skill.id %}"> Delete</a>
+            <hr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>You haven't added any skills yet.</p>
+
+    {% endif %}
+
+{% endblock %}
