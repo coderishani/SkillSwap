@@ -1,72 +1,123 @@
-# SkillSwap
+# 🚀 SkillSwap
 
-A full-stack Django web application that enables users to share their skills and connect with others through a skill exchange platform.
+A full-stack Django web application where users can share their skills, discover skills from others, and request skill exchanges.
 
----
-
-## 📌 Overview
-
-SkillSwap is a platform where users can register, showcase the skills they can teach, browse skills offered by others, and send exchange requests. Users can accept or reject incoming requests, making the platform suitable for peer-to-peer learning and collaboration.
+Built using **Python, Django, Bootstrap 5, and SQLite**.
 
 ---
 
 ## ✨ Features
 
-### 👤 User Authentication
-- User Registration
-- Login
-- Logout
-
-### 🛠 Skill Management
-- Add Skills
-- Edit Skills
-- Delete Skills
-- View Personal Skills
-
-### 🌍 Browse Skills
-- Browse skills shared by other users
-- Search skills by name
-
-### 🤝 Skill Exchange
-- Send exchange requests
-- View incoming requests
-- View sent requests
-- Accept requests
-- Reject requests
-- Track request status (Pending / Accepted / Rejected)
+- 🔐 User Authentication (Sign Up, Login, Logout)
+- 👤 User Profile Management
+- ➕ Add Skills
+- ✏️ Edit Skills
+- 🗑️ Delete Skills
+- 🌍 Browse Skills from Other Users
+- 🔍 Search Skills
+- 🤝 Send Skill Swap Requests
+- ✅ Accept Requests
+- ❌ Reject Requests
+- 📥 View Incoming Requests
+- 📤 View Sent Requests
+- 📱 Responsive Bootstrap 5 Interface
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-### Backend
-- Python
+- Python 3
 - Django
-
-### Frontend
+- Bootstrap 5
 - HTML5
 - CSS3
-- Bootstrap 5
-
-### Database
 - SQLite
-
-### Tools
 - Git
 - GitHub
-- VS Code
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+### 🔑 Login Page
+
+![Login](screenshots/login.png)
+
+---
+
+### 📝 Sign Up Page
+
+![Signup](screenshots/signup.png)
+
+---
+
+### 🌍 Browse Skills
+
+![Browse Skills](screenshots/browse_skills.png)
+
+---
+
+### 📚 My Skills
+
+![My Skills](screenshots/my_skills.png)
+
+---
+
+### ➕ Add Skill
+
+![Add Skill](screenshots/add_skill.png)
+
+---
+
+### 📥 Incoming Requests
+
+![Incoming Requests](screenshots/incoming_requests.png)
+
+---
+
+### 📤 Sent Requests
+
+![Sent Requests](screenshots/sent_requests.png)
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 SkillSwap/
 │
-├── users/
 ├── skills/
-├── templates/
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   └── templates/
+│
+├── users/
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   └── templates/
+│
+├── screenshots/
+│   ├── home.png
+│   ├── login.png
+│   ├── signup.png
+│   ├── browse_skills.png
+│   ├── my_skills.png
+│   ├── add_skill.png
+│   ├── incoming_requests.png
+│   └── sent_requests.png
+│
 ├── manage.py
+├── db.sqlite3
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -74,39 +125,53 @@ SkillSwap/
 
 ---
 
-## 🚀 Installation
+## ⚙️ Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/SkillSwap.git
+git clone https://github.com/coderishani/SkillSwap.git
 ```
 
-Move into the project
+Move into the project directory:
 
 ```bash
 cd SkillSwap
 ```
 
-Install dependencies
+Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Apply migrations
+Run migrations:
 
 ```bash
 python manage.py migrate
 ```
 
-Run the development server
+Start the development server:
 
 ```bash
 python manage.py runserver
 ```
 
-Open your browser
+Open your browser and visit:
 
 ```
 http://127.0.0.1:8000/
@@ -114,51 +179,14 @@ http://127.0.0.1:8000/
 
 ---
 
-## 📸 Screenshots
+## 🚀 Future Improvements
 
-*(Add screenshots after uploading the project to GitHub.)*
-
-Suggested screenshots:
-
-- Home Page
-- Sign Up
-- Login
-- Browse Skills
-- My Skills
-- Send Request
-- Incoming Requests
-- Sent Requests
-
----
-
-## 📚 Concepts Learned
-
-While building this project, I learned:
-
-- Django MVT Architecture
-- URL Routing
-- Models and Migrations
-- Django ORM
-- CRUD Operations
-- User Authentication
-- Template Inheritance
-- ForeignKey Relationships
-- One-to-One Relationships
-- GET vs POST Requests
-- Bootstrap Integration
-- Git & GitHub Workflow
-
----
-
-## 🔮 Future Improvements
-
-- Profile pictures
+- User profile pictures
 - Skill categories
+- Ratings and reviews
+- Chat between users
 - Email notifications
-- Real-time chat
-- Responsive UI enhancements
-- Deployment on Render
-- Pagination for large skill lists
+- Deployment on Render or PythonAnywhere
 
 ---
 
@@ -166,11 +194,8 @@ While building this project, I learned:
 
 **Ishani Jain**
 
-- B.Tech (Computer Science & Information Technology)
-- Python & Django Developer
+- GitHub: https://github.com/coderishani
 
 ---
 
-## ⭐ If you like this project
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
+⭐ If you found this project interesting, consider giving it a star!
