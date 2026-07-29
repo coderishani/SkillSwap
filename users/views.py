@@ -1,3 +1,4 @@
+from django.contrib.auth.models import user
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
@@ -22,6 +23,7 @@ def signup(request):
         "form": form
     })
 def user_login(request):
+    print("USERS:",list(User.objects.values_list("username",flat=True)))
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
 
