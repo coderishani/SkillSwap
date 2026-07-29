@@ -12,7 +12,8 @@ def signup(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
+            user=form.save()
+            print("created user:",user.username)
             return redirect("home")
     else:
         form = SignUpForm()
@@ -21,7 +22,6 @@ def signup(request):
         "form": form
     })
 def user_login(request):
-
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
 
@@ -29,6 +29,8 @@ def user_login(request):
             user = form.get_user()
             login(request, user)
             return redirect("home")
+        else:
+            print(form.errors)   # <-- Add this line
 
     else:
         form = AuthenticationForm()
