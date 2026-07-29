@@ -13,10 +13,10 @@ def signup(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user=form.save()
-            print("created user:",user.username)
+            print("USER CREATED:",user.username)
             return redirect("home")
     else:
-        form = SignUpForm()
+        print(form.errors)
 
     return render(request, "signup.html", {
         "form": form
