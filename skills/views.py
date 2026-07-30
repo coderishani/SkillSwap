@@ -14,9 +14,7 @@ def add_skill(request):
             skill.save()
 
             return redirect("home")
-
-        else:
-            form = SkillForm()
+        form = SkillForm()
 
     return render(request, "skills/add_skill.html", {"form": form})
 
