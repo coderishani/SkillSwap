@@ -1,20 +1,27 @@
-# 🚀 # SkillSwap - A Django Skill Exchange Platform
+# 🚀 SkillSwap
 
-A full-stack Django web application where users can share their skills, discover skills from others, and request skill exchanges.
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![Django](https://img.shields.io/badge/Django-4.2-green?logo=django)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![Render](https://img.shields.io/badge/Render-Deployed-success?logo=render)
+![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black?logo=github)
 
-Built using **Python, Django, Bootstrap 5, and SQLite**.
+> A full-stack Django web application for exchanging skills through user profiles, skill listings, and swap requests.
+
+Built using **Python, Django, Bootstrap 5, PostgreSQL and render**.
 
 ---
 
-## Live Demo
+## 🌐 Live Demo
 
 https://skillswap-ezax.onrender.com
 
-### Demo Credentials
+## 🔑 Demo
 
 Create your own account using the Sign Up page.
 
-Administrator access is available only to the project owner.
+Administrator access is restricted to the project owner.
 
 
 ## ✨ Features
@@ -34,15 +41,30 @@ Administrator access is available only to the project owner.
 - 📱 Responsive Bootstrap 5 Interface
 
 ---
+Tech Stack: 
 
-## 🛠️ Tech Stack
+Backend
 
-- Python 3
+- Python
 - Django
-- Bootstrap 5
+
+Frontend
+
 - HTML5
 - CSS3
-- SQLite
+- Bootstrap 5
+
+Database
+
+- PostgreSQL (Production)
+- SQLite (Development)
+
+Deployment
+
+- Render
+
+Version Control
+
 - Git
 - GitHub
 
@@ -97,6 +119,21 @@ Administrator access is available only to the project owner.
 ![Sent Requests](screenshots/sent_requests.png)
 
 ---
+Architecture: 
+
+Browser
+    │
+    ▼
+Django URLs
+    │
+    ▼
+Views
+    │
+    ▼
+Models
+    │
+    ▼
+PostgreSQL
 
 ## 📂 Project Structure
 
@@ -192,15 +229,38 @@ http://127.0.0.1:8000/
 
 ## 🚀 Future Improvements
 
-- User profile pictures
-- Skill categories
-- Ratings and reviews
-- Chat between users
-- Email notifications
-- Deployment on Render or PythonAnywhere
+Real-time messaging
+User ratings
+Profile pictures
+Notifications
+Email verification
+Skill recommendations
 
 ---
+## 📚 What I Learned
 
+Building SkillSwap helped me gain practical experience with:
+
+- Django authentication
+- CRUD operations
+- Django ORM
+- Forms and validation
+- User authorization
+- Git and GitHub workflow
+- PostgreSQL integration
+- Render deployment
+- Debugging production issues
+
+  ## 🚀 Challenges Faced
+
+Some challenges encountered during development included:
+
+- Configuring PostgreSQL for production
+- Deploying Django on Render
+- Managing environment variables
+- Debugging authentication issues
+- Migrating from SQLite to PostgreSQL
+  
 ## 👩‍💻 Author
 
 **Ishani Jain**
@@ -209,4 +269,4 @@ http://127.0.0.1:8000/
 
 ---
 
-⭐ If you found this project interesting, consider giving it a star!
+⭐ If you found this project helpful, consider giving it a star!
