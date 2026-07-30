@@ -30,7 +30,7 @@ def user_login(request):
         form = AuthenticationForm(request, data=request.POST)
 
         if form.is_valid():
-            user = form.save()
+            user = form.get_user()
             login(request, user)
             return redirect("home")
         else:
