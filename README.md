@@ -5,9 +5,16 @@ A full-stack Django web application where users can share their skills, discover
 Built using **Python, Django, Bootstrap 5, and SQLite**.
 
 ---
-## 🌐 Live Demo
 
-🔗 https://skillswap-ezax.onrender.com
+## Live Demo
+
+https://skillswap-ezax.onrender.com
+
+### Demo Credentials
+
+Create your own account using the Sign Up page.
+
+Administrator access is available only to the project owner.
 
 
 ## ✨ Features
