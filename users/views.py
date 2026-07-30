@@ -14,21 +14,19 @@ def signup(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user=form.save()
-            print("USER CREATED:",user.username)
             return redirect("home")
     else:
-        print(form.errors)
+        
 
     return render(request, "signup.html", {
         "form": form
     })
 def user_login(request):
-    print("USERS:",list(User.objects.values_list("username",flat=True)))
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
 
         if form.is_valid():
-            user = form.get_user()
+            user = form.save()
             login(request, user)
             return redirect("home")
         else:
